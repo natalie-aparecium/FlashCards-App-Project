@@ -31,7 +31,7 @@ function ListDecks({ decks, deleteHandler }) {
                                         </Link>
                                     </div>
                                     <div className="btn btn-primary mx-2">
-                                        <Link to={`decks/${deck.id}/study`} className="text-white">
+                                        <Link to={`/decks/${deck.id}/study`} className="text-white">
                                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/
                                             AP+gvaeTAAAAVklEQVQ4jWNgGGygjYGB4ScDA8N/Ahgn+MnAwCBEwBK8BuCVxKaGhUSDGNEFcBmAoRAXYCJW4TA2AFsg/
                                             mJgYGAl18D/DAwMqmQ7h4GBIZOBwqRMfwAAoUAaEjY5HgQAAAAASUVORK5CYII=" alt=""/>
