@@ -96,8 +96,8 @@ function Study() {
                     <h1>{deck.name}: Study</h1>
                 </div>
                 <div className="card">
-                    <div className="card-title">Card {count +1} of {cards.length}</div>
-                        <div className="card-text">
+                    <div className="card-title">Card {count + 1} of {cards.length}</div>
+                        <div className="card-text">displaying card
                         </div>
                 </div>
             </div>
