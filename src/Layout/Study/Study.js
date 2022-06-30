@@ -19,7 +19,7 @@ function Study() {
     //function to restart deck of cards
     function restart() {
         setCount(0);
-        flipSide();
+        flipSide(true);
     };
 
     //function to go to next card
@@ -28,9 +28,10 @@ function Study() {
         if ( count >= cards.length - 1 ) {
             if ( window.confirm(`Restart cards? \n\n Click 'cancel' to return to the home page.`)) {
                 restart();
-            }
+            } else {
+                history.push("/");
+            };
 
-            history.push("/");
         } else {
             setCount(counter + 1);
             flipSide(true);
@@ -96,9 +97,14 @@ function Study() {
                     <h1>{deck.name}: Study</h1>
                 </div>
                 <div className="card">
-                    <div className="card-title">Card {count + 1} of {cards.length}</div>
-                        <div className="card-text">displaying card
-                        </div>
+                    <div className="card-title mx-3">Card {count + 1} of {cards.length}</div>
+                    <div className="card-text mx-3">
+                        { (side) ? `${cards[count].front}` : `${cards[count].back}` }
+                    </div>
+                    <div className="mt-3">
+                        <button className="btn btn-secondary mx-3" onClick={flipSide}>Flip</button>
+                        {(side) ? " " : <button className="btn btn-primary" onClick={nextCard}>Next</button>}
+                    </div>
                 </div>
             </div>
         )
