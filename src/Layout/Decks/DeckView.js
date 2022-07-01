@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Deck from "./Deck";
+import CardList from "./Cards/CardList";
 import { useParams, Link } from "react-router-dom";
 import { readDeck } from "../../utils/api";
 
@@ -38,6 +39,8 @@ function DeckView({ deleteHandler }) {
                     </ol>
                 </nav>
                 <Deck deck={deck} deleteHandler={deleteHandler}/>
+                <br />
+                <CardList cards={cards} setCards={setCards} />
             </div>
         );
     } else {
