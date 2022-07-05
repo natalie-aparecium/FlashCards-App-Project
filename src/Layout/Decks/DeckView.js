@@ -40,7 +40,7 @@ function DeckView({ deleteHandler }) {
                 </nav>
                 <Deck deck={deck} deleteHandler={deleteHandler}/>
                 <br />
-                <CardList deck={deck} cards={cards} setCards={setCards} />
+                <CardList cards={cards} setCards={setCards} />
             </div>
         );
     } else {
@@ -54,11 +54,6 @@ function DeckView({ deleteHandler }) {
                         <li className="breadcrumb-item">{deck.name}</li>
                     </ol>
                 </nav>
-                <Deck deck={deck} deleteHandler={deleteHandler}/>
-                <br />
-                <div>
-                    <h5>No cards to show. Please add cards.</h5>
-                </div>
             </div>
         )
     }
