@@ -9,6 +9,11 @@
       "name": "Rendering in React",
       "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation.",
       "id": 3
+    },
+    {
+      "name": "Promises",
+      "description": "A promise can run asynchronous code and provide a set of methods that allows the programmer to extract a single result from that code.",
+      "id": 4
     }
   ],
   "cards": [

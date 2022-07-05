@@ -50,6 +50,7 @@ function ListDecks({ decks, deleteHandler }) {
                         </div>
                     </div>
                 ))}
+                <br />
             </div>
         )
     };

@@ -54,6 +54,11 @@ function DeckView({ deleteHandler }) {
                         <li className="breadcrumb-item">{deck.name}</li>
                     </ol>
                 </nav>
+                <Deck deck={deck} deleteHandler={deleteHandler}/>
+                <br />
+                <div>
+                    <h5>No cards to show. Please add cards.</h5>
+                </div>
             </div>
         )
     }

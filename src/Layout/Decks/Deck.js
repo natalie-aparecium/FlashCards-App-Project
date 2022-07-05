@@ -27,6 +27,9 @@ function Deck({deck, deleteHandler}) {
                             Study
                         </Link>
                     </div>
+                    <div className="btn btn-primary mx-3">
+                        <Link to={`/decks/${deck.id}/cards/new`} className="text-white">+ Add cards</Link>
+                    </div>
                 </div>
                 <div>
                     <button className="btn btn-danger" name="delete" onClick={() => deleteHandler(deck.id)}>

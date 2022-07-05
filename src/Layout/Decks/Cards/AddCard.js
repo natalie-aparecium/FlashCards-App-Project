@@ -17,22 +17,6 @@ function AddCard() {
     const [formData, setFormData] = useState(newCard);
     const [cards, setCards] = useState();
 
-    const changeHandler = (event) => {
-        setFormData({ ...formData, [event.target.name]: event.target.value });
-    };
-
-    const submitHandler = async (event) => {
-        event.preventDefault();
-        const abortController = new AbortController();
-        try {
-            await createCard(deckId, formData, abortController.signal);
-            setFormData(newCard);
-            setCards(formData);
-        } catch(error) {
-            console.log(error.message);
-        };
-    };
-
     useEffect(() => {
         const abortController = new AbortController();
 
@@ -48,6 +32,22 @@ function AddCard() {
         loadDeck();
         return () => abortController.abort();
     }, []);
+
+    const changeHandler = (event) => {
+        setFormData({ ...formData, [event.target.name]: event.target.value });
+    };
+
+    const submitHandler = async (event) => {
+        event.preventDefault();
+        const abortController = new AbortController();
+        try {
+            await createCard(deckId, formData, abortController.signal);
+            setFormData(newCard);
+            setCards(formData);
+        } catch(error) {
+            console.log(error.message);
+        };
+    };
 
     if(deck){
         return (
