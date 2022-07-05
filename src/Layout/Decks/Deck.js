@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 function Deck({deck, deleteHandler}) {
     const { deckId } = useParams();
     return (
-        <div className="container">
+        <div>
             <h5>{deck.name}</h5>
             <p>{deck.description}</p>
             <div className="row d-flex justify-content-between">
@@ -27,9 +27,12 @@ function Deck({deck, deleteHandler}) {
                             Study
                         </Link>
                     </div>
+                    <div className="btn btn-primary mx-3">
+                        <Link to={`/decks/${deck.id}/cards/new`} className="text-white">+ Add cards</Link>
+                    </div>
                 </div>
                 <div>
-                    <button className="btn btn-danger" name="delete" onClick={() => deleteHandler(deck.id)}>
+                    <button className="btn btn-danger mx-3" name="delete" onClick={() => deleteHandler(deck.id)}>
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/
                         AP+gvaeTAAAAcUlEQVRIie2VzQ2AIAxGW+MW7sRMHh0U5niePIhoWtGokXcjKd8PByryC4CRLZPlrhbEqAmjqivNrkbsNMsbXDF/
                         ewOTQZ7Q0/AdDZpBM2gGdfSWofwLzs9HPNYgicjgXD7JPAkEIBbW5B4RCI4wH2IGDpt3EfVw3qsAAAAASUVORK5CYII=" alt=""/>

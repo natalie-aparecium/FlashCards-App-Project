@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
 import { deleteCard } from "../../../utils/api/index";
 
-function CardList({cards, setCards}) {
+function CardList({deck, cards, setCards}) {
     const history = useHistory();
     const { url } = useParams();
 
@@ -43,7 +43,7 @@ function CardList({cards, setCards}) {
                         <br/>
                         <div className="row d-flex justify-content-end">
                             <div className="btn btn-secondary mx-1">
-                                <Link className="text-white">
+                                <Link to={`/decks/${deck.id}/cards/${card.id}/edit`} className="text-white">
                                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/
                                     AP+gvaeTAAAAhUlEQVRIie2QQQ6DIBQFH5XbtMcxMT2NLD1IF+WMmkw3kOACbfSzYzYkQGbgSx1JQACWlvKMbQR4ASt7
                                     gpXcpXU6ijwuyoOkL+Cdc1HSW9JWXrnz8nLmEfBpf0w/ma3kmQ8wpPOntbyMXBr3P3JajKXLu7weaCc/CdyXHwRs5JW
