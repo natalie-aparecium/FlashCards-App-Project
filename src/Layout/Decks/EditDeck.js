@@ -8,7 +8,11 @@ function EditDeck() {
 
     const history = useHistory();
     const { deckId } = useParams();
-    const [ deck, setDeck ] = useState({});
+    const [ deck, setDeck ] = useState({
+        id: "",
+        name: "",
+        description: "",
+    });
     
     useEffect(() => {
         const abortController = new AbortController();
@@ -39,7 +43,7 @@ function EditDeck() {
         history.push(`/decks/${deck.id}`);
     };
 
-    //if (deck) {
+    if (deck) {
         return (
             <div className="container">
                 <nav aria-label="breadcrumb">
@@ -57,11 +61,11 @@ function EditDeck() {
                 <DeckForm deck={deck} submitHandler={handleSubmit} changeHandler={changeHandler} />
             </div>
         );
-    //} else {
-       // return (
-       //     <h3>Loading</h3>
-      //  );
-    //};
+    } else {
+        return (
+            <h3>Loading</h3>
+        );
+    };
     
 }
 

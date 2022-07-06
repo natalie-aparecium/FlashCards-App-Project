@@ -73,11 +73,11 @@ function Layout() {
           <Route path="/decks/:deckId/cards/new">
             <AddCard />
           </Route>
-          <Route path="/decks/:deckId">
-            <DeckView deleteHandler={deleteHandler}/>
-          </Route>
           <Route path="/decks/:deckId/edit">
             <EditDeck />
+          </Route>
+          <Route path="/decks/:deckId">
+            <DeckView deleteHandler={deleteHandler}/>
           </Route>
           <Route>
             {/* Not found screen */}
