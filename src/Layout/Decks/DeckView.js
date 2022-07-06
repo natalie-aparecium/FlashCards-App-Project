@@ -25,7 +25,7 @@ function DeckView({ deleteHandler }) {
         };
         loadDeck();
         return () => abortController.abort;
-    }, []);
+    }, [deckId]);
 
     if (cards.length > 0) {
         return (

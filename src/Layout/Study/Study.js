@@ -53,7 +53,7 @@ function Study() {
         };
         loadDeck();
         return () => abortController.abort;
-    }, []);
+    }, [deckId]);
 
     if (cards.length < 3) {
         return (

@@ -30,7 +30,7 @@ function AddCard() {
 
         loadDeck();
         return () => abortController.abort();
-    }, []);
+    }, [deckId]);
 
     const changeHandler = (event) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
