@@ -9,6 +9,7 @@ import Study from "./Study/Study";
 import CreateDeck from "./Decks/CreateDeck";
 import AddCard from "./Decks/Cards/AddCard";
 import DeckView from "./Decks/DeckView";
+import EditDeck from "./Decks/EditDeck";
 
 function Layout() {
   const [decks, setDecks] = useState([]);
@@ -74,6 +75,9 @@ function Layout() {
           </Route>
           <Route path="/decks/:deckId">
             <DeckView deleteHandler={deleteHandler}/>
+          </Route>
+          <Route path="/decks/:deckId/edit">
+            <EditDeck />
           </Route>
           <Route>
             {/* Not found screen */}

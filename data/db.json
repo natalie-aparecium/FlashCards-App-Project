@@ -46,6 +46,12 @@
       "back": "As properties or props",
       "deckId": 3,
       "id": 8
+    },
+    {
+      "front": "What is a Promise?",
+      "back": "a promise is",
+      "deckId": 4,
+      "id": 9
     }
   ]
 }

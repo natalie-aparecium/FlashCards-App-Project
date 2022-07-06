@@ -15,7 +15,6 @@ function AddCard() {
 
     const [deck, setDeck] = useState();
     const [formData, setFormData] = useState(newCard);
-    const [cards, setCards] = useState();
 
     useEffect(() => {
         const abortController = new AbortController();
@@ -43,7 +42,6 @@ function AddCard() {
         try {
             await createCard(deckId, formData, abortController.signal);
             setFormData(newCard);
-            setCards(formData);
         } catch(error) {
             console.log(error.message);
         };

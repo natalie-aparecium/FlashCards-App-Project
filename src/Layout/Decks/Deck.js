@@ -10,12 +10,12 @@ function Deck({deck, deleteHandler}) {
             <div className="row d-flex justify-content-between">
                 <div>
                     <div className="btn btn-secondary mx-3">
-                        <Link className="text-white">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/
-                        AP+gvaeTAAAAhUlEQVRIie2QQQ6DIBQFH5XbtMcxMT2NLD1IF+WMmkw3kOACbfSzYzYkQGbgSx1JQACWlvKMbQR4ASt7
-                        gpXcpXU6ijwuyoOkL+Cdc1HSW9JWXrnz8nLmEfBpf0w/ma3kmQ8wpPOntbyMXBr3P3JajKXLu7weaCc/CdyXHwRs5JW
-                        AnbxT4wdVKwZPpL9FqgAAAABJRU5ErkJggg==" alt=""/>
-                        Edit
+                        <Link to={`/decks/${deck.id}/edit`} className="text-white">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/
+                            AP+gvaeTAAAAhUlEQVRIie2QQQ6DIBQFH5XbtMcxMT2NLD1IF+WMmkw3kOACbfSzYzYkQGbgSx1JQACWlvKMbQR4ASt7
+                            gpXcpXU6ijwuyoOkL+Cdc1HSW9JWXrnz8nLmEfBpf0w/ma3kmQ8wpPOntbyMXBr3P3JajKXLu7weaCc/CdyXHwRs5JW
+                            AnbxT4wdVKwZPpL9FqgAAAABJRU5ErkJggg==" alt=""/>
+                            Edit
                         </Link>
                     </div>
                     <div className="btn btn-primary">
