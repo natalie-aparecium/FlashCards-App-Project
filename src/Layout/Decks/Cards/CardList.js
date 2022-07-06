@@ -4,6 +4,7 @@ import { deleteCard } from "../../../utils/api/index";
 
 function CardList({cards, setCards}) {
     const history = useHistory();
+    const { deckId } = useParams();
     const { url } = useParams();
 
     //function used to call the function deleteCard
@@ -43,7 +44,7 @@ function CardList({cards, setCards}) {
                         <br/>
                         <div className="row d-flex justify-content-end">
                             <div className="btn btn-secondary mx-1">
-                                <Link className="text-white">
+                                <Link to={`/decks/${deckId}/cards/${card.id}/edit`} className="text-white">
                                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/
                                     AP+gvaeTAAAAhUlEQVRIie2QQQ6DIBQFH5XbtMcxMT2NLD1IF+WMmkw3kOACbfSzYzYkQGbgSx1JQACWlvKMbQR4ASt7
                                     gpXcpXU6ijwuyoOkL+Cdc1HSW9JWXrnz8nLmEfBpf0w/ma3kmQ8wpPOntbyMXBr3P3JajKXLu7weaCc/CdyXHwRs5JW
