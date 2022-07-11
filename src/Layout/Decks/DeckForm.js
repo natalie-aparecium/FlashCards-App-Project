@@ -37,14 +37,14 @@ const DeckForm = ({deck, submitHandler, changeHandler}) => {
                     <div className="btn-group-justified">
                         <Link to="/">
                             <button className="btn btn-secondary">Cancel</button>
+                            <button
+                                className="btn btn-primary m-1"
+                                type="submit"
+                                onClick={submitHandler}
+                            >
+                                Submit
+                            </button>
                         </Link>
-                        <button
-                            className="btn btn-primary m-1"
-                            type="submit"
-                            onClick={submitHandler}
-                        >
-                            Submit
-                        </button>
                     </div>
                 </div>
             </form>

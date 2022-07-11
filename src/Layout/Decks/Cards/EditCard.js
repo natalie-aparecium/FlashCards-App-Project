@@ -35,7 +35,7 @@ function EditCard() {
 
         return () => abortController.abort();
 
-    }, [cardId]);
+    }, [cardId, deckId]);
 
     const changeHandler = (event) => {
         setCard({...card, [event.target.name]: event.target.value });

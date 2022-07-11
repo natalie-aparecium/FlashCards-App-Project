@@ -36,7 +36,7 @@ const CardForm = ({card, changeHandler, submitHandler}) => {
                     <br />
                     <div className="btn-group-justified">
                         <Link to={`/decks/${card.deckId}`}>
-                        <button className="btn btn-secondary">Done</button>
+                        <button className="btn btn-secondary">Cancel</button>
                         </Link>
                         <button className="btn btn-primary m-1" type="submit">
                             Save

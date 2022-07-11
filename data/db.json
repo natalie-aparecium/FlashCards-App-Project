@@ -14,6 +14,11 @@
       "name": "Promises",
       "description": "A promise can run asynchronous code and provide a set of methods that allows the programmer to extract a single result from that code.",
       "id": 4
+    },
+    {
+      "name": "Document Object Model",
+      "description": "also known as the DOM is a programming interface for web documents. It serves as a way to interact with the web pages.",
+      "id": 5
     }
   ],
   "cards": [
@@ -49,7 +54,7 @@
     },
     {
       "front": "What is a Promise?",
-      "back": "a promise is",
+      "back": "a promise is an object that represents the resulting completion",
       "deckId": 4,
       "id": 9
     }

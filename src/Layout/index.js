@@ -29,7 +29,7 @@ function Layout() {
       };
       loadDecks();
       return () => abortController.abort;
-  }, []);
+  },[]);
 
   //function used to call the function deleteDeck from "api" index file
   const callDelete = async(id) => {
