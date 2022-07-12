@@ -64,7 +64,7 @@ function Study() {
                             <Link to="/">Home</Link>
                         </li>
                         <li className="breadcrumb-item">
-                            <Link>{deck.name}</Link>
+                            {deck.name}
                         </li>
                         <li className="breadcrumb-item">Study</li>
                     </ol>
@@ -88,7 +88,7 @@ function Study() {
                             <Link to="/">Home</Link>
                         </li>
                         <li className="breadcrumb-item">
-                            <Link>{deck.name}</Link>
+                            {deck.name}
                         </li>
                         <li className="breadcrumb-item">Study</li>
                     </ol>
